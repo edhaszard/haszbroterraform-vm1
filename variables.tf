@@ -11,7 +11,7 @@ variable "default_location" {
 # Network variables
 
 variable "network_RG_name" {
-  default = "mytestTGResourceGroup2" # existing
+  default = "mytestTFResourceGroup2" # existing
 }
 
 variable "network_vnet_name" {
@@ -19,5 +19,5 @@ variable "network_vnet_name" {
 }
 
 variable "network_subnet_name" {
-  default = "vnet1sub2"
+  default = "vnet1sub2" # existing
 }
