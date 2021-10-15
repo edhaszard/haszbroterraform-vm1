@@ -32,9 +32,9 @@ variable "vm_name" {
   description = "Virtual Machine Name"
 }
 
-variable "vm_count" {
-  description = "Virtual Machine Count"
-}
+# variable "vm_count" {
+#   description = "Virtual Machine Count"
+# }
 
 variable "vm_admin_username" {
   description = "VM Admin Username"
