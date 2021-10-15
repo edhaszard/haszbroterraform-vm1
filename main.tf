@@ -50,7 +50,7 @@ module "network1" {
 module "azvm1" {
   source               = ".//modules/az_windows_vm"
   location             = module.resourcegr1.location
-  resource_group_name  = module.resourcegr1.rg_name             = 2
+  resource_group_name  = module.resourcegr1.rg_name
   vm_name              = "prd-raid-0"
   vm_size              = "Standard_D2s_v3"
   storage_account_type = "StandardSSD_LRS"
