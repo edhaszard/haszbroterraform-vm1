@@ -7,5 +7,5 @@ output "rg_name" {
 }
 
 output "tag_deployment" {
-  value = avar.tag_deployment
+  value = var.tag_deployment
 }
