@@ -33,7 +33,7 @@ resource "azurerm_windows_virtual_machine" "vm" {
   size                             = var.vm_size
   admin_username                   = var.vm_admin_username
   admin_password                   = var.vm_admin_password
-  network_interface_ids            = [azurerm_network_interface.net_if.ID]
+  network_interface_ids            = [azurerm_network_interface.net_if.id]
   #availability_set_id              = var.avset_id
   # delete_data_disks_on_termination = true
 
