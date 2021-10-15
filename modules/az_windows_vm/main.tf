@@ -1,5 +1,5 @@
 ##########################################################
-## Create NIC's for VM
+## Create NICs for VM
 ##########################################################
 resource "azurerm_network_interface" "net_if" {
   #count               = var.vm_count
@@ -27,7 +27,7 @@ resource "azurerm_network_interface" "net_if" {
 ##########################################################
 resource "azurerm_windows_virtual_machine" "vm" {
   name                             = "${var.vm_name}${count.index + 1}"
-  count                            = var.vm_count
+  #count                            = var.vm_count
   location                         = var.location
   resource_group_name              = var.resource_group_name
   size                             = var.vm_size
