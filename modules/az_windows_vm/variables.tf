@@ -44,9 +44,9 @@ variable "vm_admin_password" {
   description = "VM Admin Password"
 }
 
-variable "ad_join_password" {
-  description = ""
-}
+# variable "ad_join_password" {
+#   description = ""
+# }
 
 # variable "workspace_key" {
 #   description = "Log analytics workspace key"
