@@ -4,14 +4,14 @@
 resource "azurerm_network_interface" "net_if" {
   #count               = var.vm_count
   location            = var.location
-  name                = "${var.vm_name}${count.index + 1}-nic"
+  name                = "${var.vm_name}-nic"
   resource_group_name = var.resource_group_name
 
   ip_configuration {
     name                          = "ipconfmain"
     subnet_id                     = var.vm_subnet
-    private_ip_address_allocation = "Static"
-    private_ip_address = "${var.ip_address_range}${count.index + 6}"
+    private_ip_address_allocation = "Dynamic"
+    #private_ip_address = "${var.ip_address_range}${count.index + 6}"
   }
   tags = {
     project     = var.tag_project
