@@ -26,14 +26,14 @@ resource "azurerm_network_interface" "net_if" {
 ## Create Windows VM
 ##########################################################
 resource "azurerm_windows_virtual_machine" "vm" {
-  name                             = "${var.vm_name}${count.index + 1}"
+  name                             = var.vm_name
   #count                            = var.vm_count
   location                         = var.location
   resource_group_name              = var.resource_group_name
   size                             = var.vm_size
   admin_username                   = var.vm_admin_username
   admin_password                   = var.vm_admin_password
-  network_interface_ids            = [element(azurerm_network_interface.net_if.*.id, count.index)]
+  network_interface_ids            = azurerm_network_interface.net_if.id
   #availability_set_id              = var.avset_id
   # delete_data_disks_on_termination = true
 
@@ -47,7 +47,7 @@ resource "azurerm_windows_virtual_machine" "vm" {
   }
 
   os_disk {
-    name              = "${var.vm_name}${count.index + 1}-os"
+    name              = "var.vm_name}-os"
     storage_account_type = var.storage_account_type
     caching           = "ReadWrite"
   }
