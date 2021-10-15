@@ -6,8 +6,8 @@ variable "vm_subnet" {
   description = "Subnet ID"
 }
 
-variable "ip_address_range" {
-}
+# variable "ip_address_range" {
+# }
 
 # variable "avset_id" {
   
@@ -48,9 +48,9 @@ variable "ad_join_password" {
   description = ""
 }
 
-variable "workspace_key" {
-  description = "Log analytics workspace key"
-}
+# variable "workspace_key" {
+#   description = "Log analytics workspace key"
+# }
 
 variable "vm_size" {
   description = "VM Size"
