@@ -31,3 +31,14 @@ module "resourcegr1" {
   tag_environment = "TEST/DEV"
   tag_comments    = "VMs for Ed testing Terraform"
 }
+
+###################################################
+## NETWORK MODULE(S)
+###################################################
+module "network1" {
+  source = ".//modules/az_network"
+  location = module.resourcegr1.location
+  network_RG_name = var.network_RG_name
+  network_vnet_name = var.network_vnet_name
+  network_subnet_name = var.network_subnet_name
+}
