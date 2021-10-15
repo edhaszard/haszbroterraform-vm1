@@ -1,29 +1,17 @@
-##########################################################
-## Vnet 1
-##########################################################
-resource "azurerm_virtual_network" "vnet1" {
-    name = var.vnet_name
-    location = var.location
-    resource_group_name = var.network_resource_group_name
-    address_space = var.vnet_addr_space
+# Get data for existing Resource Group
+data "azurerm_resource_group" "rg" {
+  name = var.network_RG_name
 }
 
-##########################################################
-## Subnet 1
-##########################################################
-resource "azurerm_subnet" "subnet1" {
-    name = var.subnet1_name
-    virtual_network_name = azurerm_virtual_network.vnet1.name
-    resource_group_name = var.network_resource_group_name
-    address_prefixes = var.subnet1_prefix
+# Get data for existing Vnet
+data "azurerm_virtual_network" "vnet" {
+  name = var.network_vnet_name
+  resource_group_name = data.azurerm_resource_group.rg.name
 }
 
-##########################################################
-## Subnet 2
-##########################################################
-resource "azurerm_subnet" "subnet2" {
-    name = var.subnet2_name
-    virtual_network_name = azurerm_virtual_network.vnet1.name
-    resource_group_name = var.network_resource_group_name
-    address_prefixes = var.subnet2_prefix
+# Get data for existing subnet
+data "azurerm_subnet" "subnet1" {
+    name = var.network_subnet_name
+    virtual_network_name = data.azurerm_virtual_network.vnet.name
+    resource_group_name = data.azurerm_resource_group.rg.name
 }

@@ -1,29 +1,15 @@
-variable "vnet_name" {
-  description = "Name of the vnet to create"
-}
-
-variable "network_resource_group_name" {
-  description = "Vnet resource group"
-}
-
 variable "location" {
-  }
-
-variable "vnet_addr_space" {
+  description = "Azure location of the network"
 }
 
-variable "subnet1_name" {
-  description = "subnet 1 name."
+variable "network_RG_name" {
+  description = "Name of the Resource Group for the network"
 }
 
-variable "subnet1_prefix" {
-  description = "subnet 1 prefix"
+variable "network_vnet_name" {
+  description = "Name of the Vnet for the network"
 }
 
-variable "subnet2_name" {
-  description = "subnet 2 name."
-}
-
-variable "subnet2_prefix" {
-  description = "subnet 2 prefix"
+variable network_subnet_name {
+  description = "Name of the subnet for the network"
 }
