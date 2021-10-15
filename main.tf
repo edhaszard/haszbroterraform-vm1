@@ -61,7 +61,7 @@ module "azvm1" {
   #ip_address_range    = "10.200.0."
   vm_admin_username    = var.vm_admin_username
   vm_admin_password    = var.vm_admin_password
-  ad_join_password     = var.ad_join_password
+  #ad_join_password     = var.ad_join_password
   #workspace_key        = var.workspace_key
   ### AZURE PUBLIC IMAGE
   vm_storage_img_publisher = "MicrosoftWindowsServer"
