@@ -25,7 +25,7 @@ provider "azurerm" {
 module "resourcegr1" {
   source              = ".//modules/az_resource" ### Logical path to module files
   location            = var.default_location
-  resource_group_name = var.resource_group_name
+  resource_group_name = var.resource_group1_name
   ### TAGS - Referenced by other modules below
   tag_project     = "haszbro testing"
   tag_environment = "TEST/DEV"
