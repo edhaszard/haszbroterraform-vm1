@@ -2,7 +2,7 @@
 ## Create NIC's for VM
 ##########################################################
 resource "azurerm_network_interface" "net_if" {
-  count               = var.vm_count
+  #count               = var.vm_count
   location            = var.location
   name                = "${var.vm_name}${count.index + 1}-nic"
   resource_group_name = var.resource_group_name
