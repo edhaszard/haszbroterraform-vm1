@@ -9,9 +9,9 @@ variable "vm_subnet" {
 variable "ip_address_range" {
 }
 
-variable "avset_id" {
+# variable "avset_id" {
   
-}
+# }
 
 variable "location" {
   description = "Location"
