@@ -47,7 +47,7 @@ resource "azurerm_windows_virtual_machine" "vm" {
   }
 
   os_disk {
-    name              = "var.vm_name-os"
+    name              = "${var.vm_name}-os"
     storage_account_type = var.storage_account_type
     caching           = "ReadWrite"
   }
