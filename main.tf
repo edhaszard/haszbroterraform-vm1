@@ -22,7 +22,7 @@ provider "azurerm" {
 ###################################################
 ## RESOURCE GROUP MODULE(S)
 ###################################################
-module "resourcegr1" {
+module "vm_resourcegr" {
   source              = ".//modules/az_resource" ### Logical path to module files
   location            = var.default_location
   resource_group_name = var.resource_group1_name
