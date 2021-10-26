@@ -38,7 +38,7 @@ module "vm_resourcegr" {
 ###################################################
 module "network1" {
   source = ".//modules/az_network"
-  location = module.resourcegr1.location
+  location = module.vm_resourcegr.location
   network_RG_name = var.network_RG_name
   network_vnet_name = var.network_vnet_name
   network_subnet_name = var.network_subnet_name
@@ -49,8 +49,8 @@ module "network1" {
 ###################################################
 module "azvm1" {
   source               = ".//modules/az_windows_vm"
-  location             = module.resourcegr1.location
-  resource_group_name  = module.resourcegr1.rg_name
+  location             = module.vm_resourcegr.location
+  resource_group_name  = module.vm_resourcegr.rg_name
   vm_name              = "haszbro-test-vm"
   vm_size              = "Standard_D2s_v3"
   storage_account_type = "StandardSSD_LRS"
@@ -68,8 +68,8 @@ module "azvm1" {
   vm_storage_img_offer     = "WindowsServer"
   vm_storage_img_sku       = "2019-datacenter-gensecond"
   ### TAGS
-  tag_project     = module.resourcegr1.tag_project
-  tag_environment = module.resourcegr1.tag_environment
-  tag_comments    = module.resourcegr1.tag_comments
-  tag_deployment  = module.resourcegr1.tag_deployment
+  tag_project     = module.vm_resourcegr.tag_project
+  tag_environment = module.vm_resourcegr.tag_environment
+  tag_comments    = module.vm_resourcegr.tag_comments
+  tag_deployment  = module.vm_resourcegr.tag_deployment
 }
