@@ -53,12 +53,12 @@ variable "mdisk_1_size" {
 }
 
 # mdisk 2
-variable "mdisk_1_name" {
+variable "mdisk_2_name" {
   description = "Name for the Managed Disk"
   default = "Data2"  
 }
 
-variable "mdisk_1_size" {
+variable "mdisk_2_size" {
   description = "Size of the Managed Disk in GB"
   default = "128"  
 }
