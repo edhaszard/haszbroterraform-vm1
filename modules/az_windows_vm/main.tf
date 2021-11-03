@@ -62,6 +62,16 @@ resource "azurerm_windows_virtual_machine" "vm" {
 }
 
 # ##########################################################
+# ### Attach data disk to VM
+# ##########################################################
+resource "azurerm_virtual_machine_data_disk_attachment" "attdisk1" {
+  lun = 1
+  managed_disk_id = module.mdisk_d.id
+  virtual_machine_id = azurerm_windows_virtual_machine.vm.id
+  caching = "ReadWrite"
+}
+
+# ##########################################################
 # ### Azure Monitoring Agent
 # ##########################################################
 # resource "azurerm_virtual_machine_extension" "vmagent" {
