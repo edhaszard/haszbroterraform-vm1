@@ -34,6 +34,12 @@ variable "vm_admin_password"{
   default = ""
 }
 
+# vm variables
+variable "vm_name" {
+  description = "The VM's name"
+  default = "haszbro-test-vm"  
+}
+
 # managed disk variables
 variable "mdisk_d_name" {
   description = "Name for the Managed Disk"

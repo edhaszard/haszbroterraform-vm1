@@ -64,7 +64,7 @@ module "azvm1" {
   source               = ".//modules/az_windows_vm"
   location             = module.vm_resourcegr.location
   resource_group_name  = module.vm_resourcegr.rg_name
-  vm_name              = "haszbro-test-vm"
+  vm_name              = var.vm_name
   vm_size              = "Standard_D2s_v3"
   storage_account_type = "StandardSSD_LRS"
   data_disk_size       = "100"
