@@ -13,3 +13,12 @@ variable "network_vnet_name" {
 variable network_subnet_name {
   description = "Name of the subnet for the network"
 }
+
+variable "tag_project" {
+}
+
+variable "tag_environment" {
+}
+
+variable "tag_comments" {
+}
