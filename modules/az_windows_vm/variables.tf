@@ -6,6 +6,8 @@ variable "vm_subnet" {
   description = "Subnet ID"
 }
 
+variable "vm_public_ip" {
+}
 # variable "ip_address_range" {
 # }
 

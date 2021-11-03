@@ -11,7 +11,7 @@ resource "azurerm_network_interface" "net_if" {
     name                          = "ipconfmain"
     subnet_id                     = var.vm_subnet
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = module.network1.public_ip_id
+    public_ip_address_id = var.vm_public_ip
     #private_ip_address = "${var.ip_address_range}${count.index + 6}"
   }
   tags = {
