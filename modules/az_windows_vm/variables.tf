@@ -32,6 +32,9 @@ variable "vm_name" {
   description = "Virtual Machine Name"
 }
 
+variable "mdisk_d_id" {  
+}
+
 # variable "vm_count" {
 #   description = "Virtual Machine Count"
 # }

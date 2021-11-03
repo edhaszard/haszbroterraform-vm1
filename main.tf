@@ -70,6 +70,7 @@ module "azvm1" {
   data_disk_size       = "100"
   data_disk_type       = "StandardSSD_LRS"
   vm_subnet            = module.network1.subnet1_id
+  mdisk_d_id = module.mdisk_d.mdisk_d_id
   #avset_id             = module.azavset.avset_id
   #ip_address_range    = "10.200.0."
   vm_admin_username    = var.vm_admin_username
