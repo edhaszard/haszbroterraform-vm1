@@ -41,12 +41,12 @@ variable "vm_name" {
 }
 
 # managed disk variables
-variable "mdisk_d_name" {
+variable "mdisk_1_name" {
   description = "Name for the Managed Disk"
   default = "Data"  
 }
 
-variable "mdisk_size_d" {
+variable "mdisk_1_size" {
   description = "Size of the Managed Disk in GB"
   default = "1024"  
 }

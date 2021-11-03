@@ -66,7 +66,7 @@ resource "azurerm_windows_virtual_machine" "vm" {
 # ##########################################################
 resource "azurerm_virtual_machine_data_disk_attachment" "attdisk1" {
   lun = 1
-  managed_disk_id = var.mdisk_d_id
+  managed_disk_id = var.mdisk_1_id
   virtual_machine_id = azurerm_windows_virtual_machine.vm.id
   caching = "ReadWrite"
 }
