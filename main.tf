@@ -80,6 +80,7 @@ module "azvm1" {
   data_disk_size       = "100"
   data_disk_type       = "StandardSSD_LRS"
   vm_subnet            = module.network1.subnet1_id
+  vm_public_ip = module.network1.public_ip_id
   mdisk_1_id = module.mdisk_1.mdisk_id
   mdisk_2_id = module.mdisk_2.mdisk_id
   #avset_id             = module.azavset.avset_id

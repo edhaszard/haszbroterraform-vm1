@@ -15,3 +15,17 @@ data "azurerm_subnet" "subnet1" {
     virtual_network_name = data.azurerm_virtual_network.vnet.name
     resource_group_name = data.azurerm_resource_group.rg.name
 }
+
+# create Public IP address
+resource "azurerm_public_ip" "public_ip_1" {
+  name = "haszbro_public_ip"
+  resource_group_name = data.azurerm_resource_group.rg.name
+  location = data.azurerm_resource_group.rg.location
+  allocation_method = "Static"
+
+  tags = {
+    project     = var.tag_project
+    environment = var.tag_environment
+    comments    = var.tag_comments
+  }
+}
