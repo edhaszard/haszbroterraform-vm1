@@ -42,6 +42,9 @@ module "network1" {
   network_RG_name = var.network_RG_name
   network_vnet_name = var.network_vnet_name
   network_subnet_name = var.network_subnet_name
+  tag_project     = module.vm_resourcegr.tag_project
+  tag_environment = module.vm_resourcegr.tag_environment
+  tag_comments    = module.vm_resourcegr.tag_comments
 }
 
 ###################################################
