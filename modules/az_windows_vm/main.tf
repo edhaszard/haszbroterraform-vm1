@@ -62,11 +62,18 @@ resource "azurerm_windows_virtual_machine" "vm" {
 }
 
 # ##########################################################
-# ### Attach data disk to VM
+# ### Attach managed disk(s) to VM
 # ##########################################################
 resource "azurerm_virtual_machine_data_disk_attachment" "attdisk1" {
   lun = 1
   managed_disk_id = var.mdisk_1_id
+  virtual_machine_id = azurerm_windows_virtual_machine.vm.id
+  caching = "ReadWrite"
+}
+
+resource "azurerm_virtual_machine_data_disk_attachment" "attdisk2" {
+  lun = 1
+  managed_disk_id = var.mdisk_2_id
   virtual_machine_id = azurerm_windows_virtual_machine.vm.id
   caching = "ReadWrite"
 }

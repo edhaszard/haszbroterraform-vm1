@@ -45,7 +45,7 @@ module "network1" {
 }
 
 ###################################################
-## MANAGED DISK MODULE
+## MANAGED DISK MODULE(S)
 ###################################################
 module "mdisk_1" {
   source = ".//modules/az_managed_disk" # path to module
@@ -55,6 +55,16 @@ module "mdisk_1" {
   storage_account_type = var.storage_account_type
   mdisk_create_option = "Empty"
   mdisk_size_gb = var.mdisk_1_size
+}
+
+module "mdisk_2" {
+  source = ".//modules/az_managed_disk" # path to module
+  location = module.vm_resourcegr.location
+  resource_group_name = module.vm_resourcegr.rg_name
+  mdisk_name = "${var.vm_name}-${var.mdisk_2_name}"
+  storage_account_type = var.storage_account_type
+  mdisk_create_option = "Empty"
+  mdisk_size_gb = var.mdisk_2_size
 }
 
 ###################################################
@@ -70,7 +80,8 @@ module "azvm1" {
   data_disk_size       = "100"
   data_disk_type       = "StandardSSD_LRS"
   vm_subnet            = module.network1.subnet1_id
-  mdisk_1_id = module.mdisk_1.mdisk_1_id
+  mdisk_1_id = module.mdisk_1.mdisk_id
+  mdisk_2_id = module.mdisk_2.mdisk_id
   #avset_id             = module.azavset.avset_id
   #ip_address_range    = "10.200.0."
   vm_admin_username    = var.vm_admin_username

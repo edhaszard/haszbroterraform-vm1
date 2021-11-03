@@ -41,14 +41,26 @@ variable "vm_name" {
 }
 
 # managed disk variables
+# mdisk 1
 variable "mdisk_1_name" {
   description = "Name for the Managed Disk"
-  default = "Data"  
+  default = "Data1"  
 }
 
 variable "mdisk_1_size" {
   description = "Size of the Managed Disk in GB"
   default = "1024"  
+}
+
+# mdisk 2
+variable "mdisk_1_name" {
+  description = "Name for the Managed Disk"
+  default = "Data2"  
+}
+
+variable "mdisk_1_size" {
+  description = "Size of the Managed Disk in GB"
+  default = "128"  
 }
 
 variable "storage_account_type" {
