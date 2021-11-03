@@ -51,7 +51,7 @@ module "mdisk_d" {
   source = ".//modules/az_managed_disk" # path to module
   location = module.vm_resourcegr.location
   resource_group_name = module.vm_resourcegr.rg_name
-  mdisk_name = "${var.vm_name} - ${var.mdisk_d_name}"
+  mdisk_name = "${var.vm_name}-${var.mdisk_d_name}"
   storage_account_type = var.storage_account_type
   mdisk_create_option = "Empty"
   mdisk_size_gb = var.mdisk_size_d
