@@ -50,6 +50,7 @@ module "network1" {
 ###################################################
 ## MANAGED DISK MODULE(S)
 ###################################################
+
 module "mdisk_1" {
   source = ".//modules/az_managed_disk" # path to module
   location = module.vm_resourcegr.location
