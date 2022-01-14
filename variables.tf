@@ -1,4 +1,4 @@
-# RG variables
+# VM RG variables
 
 variable "resource_group1_name" {
   default = "VMresourceGroup1"
@@ -6,6 +6,16 @@ variable "resource_group1_name" {
 
 variable "default_location" {
   default = "australiaeast"
+}
+
+# ASR RG variables
+
+variable "resource_group2_name" {
+  default = "ASRresourcegroup1"
+}
+
+variable "asr_location" {
+  default = "westus"
 }
 
 # Network variables
