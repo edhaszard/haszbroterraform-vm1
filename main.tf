@@ -29,7 +29,7 @@ module "vm_resourcegr" {
   ### TAGS - Referenced by other modules below
   tag_project     = "haszbro testing"
   tag_environment = "TEST/DEV"
-  tag_comments    = "ASR for Ed testing Terraform"
+  tag_comments    = "VMs for Ed testing Terraform"
   tag_deployment = "Just testing!"
 }
 
@@ -42,7 +42,7 @@ module "asr_resourcegr" {
   ### TAGS - Referenced by other modules below
   tag_project     = "haszbro testing"
   tag_environment = "TEST/DEV"
-  tag_comments    = "VMs for Ed testing Terraform"
+  tag_comments    = "ASR for Ed testing Terraform"
   tag_deployment = "Just testing!"
 }
 
