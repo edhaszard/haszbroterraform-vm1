@@ -121,7 +121,7 @@ module "azvm1" {
 ## AZURE SITE RECOVERY VAULT MODULE
 ###################################################
 module "vault1" {
-  source = "//modules/az_recovery_vault"
+  source = ".//modules/az_recovery_vault"
   location = module.asr_resourcegr.location
   resource_group_name = module.asr_resourcegr.Name
 }
