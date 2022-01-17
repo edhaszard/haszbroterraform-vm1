@@ -1,5 +1,5 @@
 data "azurerm_resource_group" "VM_rg" {
-    name = var.resource_group1_name
+    name = var.VM_rg
 }
 
 data "azurerm_resource_group" "ASR_rg" {

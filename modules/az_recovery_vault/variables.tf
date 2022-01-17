@@ -1,4 +1,4 @@
-variable "resource_group1_name" {
+variable "VM_rg" {
   description = "name of the resource group containing the VM"
 }
 
