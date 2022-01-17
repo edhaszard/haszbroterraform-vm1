@@ -3,7 +3,7 @@ data "azurerm_resource_group" "VM_rg" {
 }
 
 data "azurerm_resource_group" "ASR_rg" {
-    name = var.resource_group_ASRresourcegroup
+    name = var.ASR_rg
 }
 
 resource "azurerm_recovery_services_vault" "vault" {
