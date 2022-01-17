@@ -7,7 +7,7 @@
 #}
 
 resource "azurerm_recovery_services_vault" "vault" {
-    name = "rv-test-${data.azurerm_resource_group.ASR_rg.location}"
+    name = "rv-test-${var.ASR_rg.location}"
     location = var.ASR_rg_location
     resource_group_name = var.ASR_rg_name
     sku = var.ASR_sku
