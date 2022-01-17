@@ -124,5 +124,5 @@ module "vault1" {
   source = ".//modules/az_recovery_vault"
   VM_rg = var.resource_group1_name
   ASR_rg = "ASR_${var.resource_group1_name}"
-  asr_sku = "Standard"
+  ASR_sku = "Standard"
 }
