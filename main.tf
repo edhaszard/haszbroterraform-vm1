@@ -122,5 +122,4 @@ module "azvm1" {
 ###################################################
 module "vault1" {
   source = ".//modules/az_recovery_vault"
-  location = module.asr_resourcegr.location
 }
