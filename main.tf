@@ -38,7 +38,7 @@ module "vm_resourcegr" {
 module "asr_resourcegr" {
   source              = ".//modules/az_resource" ### Logical path to module files
   location            = var.asr_location
-  resource_group_name = "ASR_${var.resource_group1_name}"
+  resource_group_name = var.asr_rg_name
   ### TAGS - Referenced by other modules below
   tag_project     = "haszbro testing"
   tag_environment = "TEST/DEV"
@@ -123,5 +123,5 @@ module "azvm1" {
 module "vault1" {
   source = ".//modules/az_recovery_vault"
   VM_rg = var.resource_group1_name
-  ASR_rg = module.asr_resourcegr.name
+  ASR_rg = var.asr_rg_name
 }

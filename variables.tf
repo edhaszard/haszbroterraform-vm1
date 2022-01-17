@@ -14,6 +14,10 @@ variable "asr_location" {
   default = "westus"
 }
 
+variable "asr_rg_name" {
+  default = "ASR_${var.resource_group1_name}"
+}
+
 # Network variables
 
 variable "network_RG_name" {
