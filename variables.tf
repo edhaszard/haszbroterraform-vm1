@@ -10,10 +10,6 @@ variable "default_location" {
 
 # ASR RG variables
 
-variable "resource_group2_name" {
-  default = "ASRresourcegroup1"
-}
-
 variable "asr_location" {
   default = "westus"
 }
