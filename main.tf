@@ -116,3 +116,12 @@ module "azvm1" {
   tag_comments    = module.vm_resourcegr.tag_comments
   tag_deployment  = module.vm_resourcegr.tag_deployment
 }
+
+###################################################
+## AZURE SITE RECOVERY VAULT MODULE
+###################################################
+module "vault1" {
+  source = "//modules/az_recovery_vault"
+  location = module.asr_resourcegr.location
+  resource_group_name = module.asr_resourcegr.Name
+}
