@@ -4,7 +4,7 @@
 #################################################
 terraform {
   backend "remote" {
-    organization = "haszbro"
+    organization = "haszbro2"
     workspaces {
       name = "haszbroterraform"
     }
